@@ -44,7 +44,7 @@ Python, pandas, NumPy, Matplotlib, Seaborn, SciPy, Jupyter Notebook, Bokeh, Plot
 4. Open a project's Notebook from its own folder and run cells in order.
 5. Use the project README to identify the research question, files, data note, and limitation.
 
-The main EDA notebooks use relative paths and do not require the original `D:\7204` folder. Some geospatial notebooks use legacy packages; their README identifies that environment limitation.
+The main EDA notebooks use relative paths and do not require the original course folder. Some geospatial notebooks use legacy packages; their README identifies that environment limitation.
 
 ## Responsible sharing
 
