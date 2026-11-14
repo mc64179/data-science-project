@@ -1,61 +1,62 @@
-# Technology Stock Trends, 2013-2018
+# CISC7204 Data Science Project Collection
 
-## Research question
+**Student:** Chen Tianying (MC641790)
+**Course:** CISC7204 Data Science and Data Visualization
+**Status:** Completed course collection; selected analyses are ready for portfolio review.
 
-How did the closing prices of Alphabet (GOOGL), Meta/Facebook (FB), Apple (AAPL), Amazon (AMZN), and Microsoft (MSFT) change from 8 February 2013 to 7 February 2018, and which stock recorded the greatest percentage growth over that period?
+This public project repository documents my semester development from exploratory data analysis to visual communication, interactive graphics, geospatial methods, and statistical reasoning. Assignment 01, Assignment 02, and Midterm materials are kept separate.
 
-## Dataset and permission
+## Featured project
 
-The analysis uses five CSV files supplied for CISC7204 coursework. Each file contains 1,259 daily observations with date, open, high, low, close, volume, and ticker fields. The structure and period correspond to the public [S&P 500 stock data](https://www.kaggle.com/datasets/camnugent/sandp500) dataset on Kaggle, which lists its source data as public-domain (CC0). The included files are used here for educational and portfolio purposes. Users should verify the source terms before redistributing the data outside this context.
+### London Housing Prices and Crime Patterns
 
-No credentials, personal data, or restricted information are included.
+**Research question:** How do average housing prices and recorded crime counts vary across years and areas in the supplied London housing dataset?
+
+The analysis converts dates, derives year and month fields, compares yearly price extremes, summarizes crime counts by area, and identifies lower-priced records. Representative visuals are available in [`london-housing-analysis/figures/`](london-housing-analysis/figures/). The results are descriptive; the exercise data do not establish a causal relationship between crime and housing prices.
+
+## Project collection
+
+| Project | Research focus |
+|---|---|
+| [London Housing Analysis](london-housing-analysis/README.md) | Housing prices, crime counts, years, and areas |
+| [Police Data Analysis](police-data-analysis/README.md) | Violations, searches, stop duration, and age distributions |
+| [Weather Analysis](weather-analysis/README.md) | Weather conditions and grouped measurement summaries |
+| [Cars Data Analysis](cars-analysis/README.md) | Data cleaning, vehicle origins, weight, and fuel economy |
+| [COVID-19 Analysis](covid-19-analysis/README.md) | Regional confirmed, death, and recovered cases |
+
+## Course learning areas
+
+- [Visualization basics](visualization-basics/README.md)
+- [Advanced visualization](advanced-visualization/README.md)
+- [Geospatial visualization](geospatial-visualization/README.md)
+- [Interactive visualization](interactive-visualization/README.md)
+- [Statistical reasoning](statistical-reasoning/README.md)
 
 ## Methods and tools
 
-- Python, pandas, Matplotlib, and Jupyter Notebook
-- Date parsing and combination of five company-level CSV files
-- Line charts of raw closing prices
-- Indexing each stock to 100 on the first date for a like-for-like growth comparison
+Python, pandas, NumPy, Matplotlib, Seaborn, SciPy, Jupyter Notebook, Bokeh, Plotly, Folium, and related visualization libraries.
 
-## Key findings
+## Reproducibility
 
-The raw-price chart shows Amazon ending with the highest share price. The indexed comparison gives the more meaningful relative result: Facebook recorded the largest increase, approximately **531.2%**, followed by Amazon at **440.9%**. Microsoft rose about **225.3%**, Alphabet about **168.5%**, and Apple about **135.1%** between the first and last observations.
+1. Clone or download this repository.
+2. Create a Python 3 environment.
+3. Run `pip install -r requirements.txt`.
+4. Open a project's Notebook from its own folder and run cells in order.
+5. Use the project README to identify the research question, files, data note, and limitation.
 
-![Closing prices for five companies](visualizations/closing-price-trends.png)
+The main EDA notebooks use relative paths and do not require the original `D:\7204` folder. Some geospatial notebooks use legacy packages; their README identifies that environment limitation.
 
-![Indexed growth comparison](visualizations/normalized-growth.png)
+## Responsible sharing
 
-## Limitation
+The datasets came from course exercise materials. Before public release, verify each original provider's licence and attribution requirements. No passwords, API keys, or private records are included.
 
-Closing-price growth alone does not represent total investor return because the analysis does not adjust for dividends, stock splits, transaction costs, inflation, or risk. It also describes historical performance and should not be interpreted as investment advice.
+## Verification status
 
-## Reproduce the analysis
+- [x] Project folders and names are organized.
+- [x] Main notebooks use portable relative data paths.
+- [x] Main EDA projects include selected visualizations.
+- [x] README files describe research questions, methods, findings, and limitations.
+- [ ] Dataset licences and source attributions verified against the original providers.
+- [ ] Peer feedback recorded and linked to a public improvement commit.
 
-1. Clone this repository and enter its folder.
-2. Create and activate a virtual environment.
-3. Install the dependencies with `pip install -r requirements.txt`.
-4. Run `python analysis.py` to regenerate both images in `visualizations/`.
-5. Optionally open `notebooks/mc641790_Activity6.01.ipynb` in JupyterLab to review the original notebook analysis.
-
-The script uses paths relative to the repository, so it can be run from any working directory.
-
-## Repository structure
-
-```text
-data/
-  AAPL_data.csv, AMZN_data.csv, FB_data.csv, GOOGL_data.csv, MSFT_data.csv
-notebooks/
-  mc641790_Activity6.01.ipynb
-  mc641790_Activity6.02.ipynb
-  mc641790_Exercise6.01.ipynb
-visualizations/
-  closing-price-trends.png
-  normalized-growth.png
-analysis.py
-requirements.txt
-```
-
-## Author
-
-CHEN TIANYING (`mc641790`)  
-CISC7204 Data Science Programming
+The two unchecked items require evidence outside the local files before final publication.
