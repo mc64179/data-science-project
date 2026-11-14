@@ -1,38 +1,28 @@
 # CISC7204 Data Science Project Collection
 
-**Student:** Chen Tianying (MC641790)
-**Course:** CISC7204 Data Science and Data Visualization
-**Status:** Completed course collection; selected analyses are ready for portfolio review.
+**Course:** CISC7204 Data Science and Data Visualization  
+**Status:** Completed semester collection
 
-This public project repository documents my semester development from exploratory data analysis to visual communication, interactive graphics, geospatial methods, and statistical reasoning.
-## Featured project
+This public repository documents my semester work in data cleaning, exploratory analysis, visual communication, interactive graphics, geospatial methods, and statistical reasoning. Assignment 01, Assignment 02, and Midterm materials remain separate.
 
-### London Housing Prices and Crime Patterns
+## Featured project: London Housing Prices and Crime Patterns
 
-**Research question:** How do average housing prices and recorded crime counts vary across years and areas in the supplied London housing dataset?
+**Research question:** How do housing prices change over time in the England aggregate series, and how do recorded crime counts and lower-price records vary across London boroughs in the supplied housing dataset?
 
-The analysis converts dates, derives year and month fields, compares yearly price extremes, summarizes crime counts by area, and identifies lower-priced records. Representative visuals are available in [`london-housing-analysis/figures/`](london-housing-analysis/figures/). The results are descriptive; the exercise data do not establish a causal relationship between crime and housing prices.
+The analysis converts dates, derives year and month fields, filters London boroughs explicitly for borough comparisons, and creates the figures with reproducible Python code. England's maximum monthly average price rose from **£53,901 in 1995** to **£250,410 in 2019**; the 2020 value is **£247,355** from one month only. Westminster had the highest maximum monthly crime count (**7,461**), followed by Lambeth (**4,701**) and Camden (**4,558**). There were **104 zero-crime records**, all from City of London between 2001 and 2010. Records below £100,000 were most frequent in Barking and Dagenham (**85**), Newham (**72**), and Bexley/Waltham Forest (**64 each**).
 
-## Featured visualizations
+![Yearly housing prices](london-housing-analysis/figures/yearly-price-range.svg)
 
-The featured London Housing analysis includes readable outputs with titles and labelled axes. The first figure compares yearly average-price extremes; the second compares recorded crime counts across areas.
-
-![Yearly housing price comparison](london-housing-analysis/figures/yearly-price-range.svg)
-
-*Figure 1. Yearly housing price comparison from the supplied London housing dataset.*
-
-![Area crime comparison](london-housing-analysis/figures/crime-by-area.svg)
-
-*Figure 2. Area-level crime comparison from the same dataset.*
+![Crime by borough](london-housing-analysis/figures/crime-by-borough.svg)
 
 ## Project collection
 
 | Project | Research focus |
 |---|---|
-| [London Housing Analysis](london-housing-analysis/README.md) | Housing prices, crime counts, years, and areas |
+| [London Housing Analysis](london-housing-analysis/README.md) | Housing prices and London borough crime patterns |
 | [Police Data Analysis](police-data-analysis/README.md) | Violations, searches, stop duration, and age distributions |
 | [Weather Analysis](weather-analysis/README.md) | Weather conditions and grouped measurement summaries |
-| [Cars Data Analysis](cars-analysis/README.md) | Data cleaning, vehicle origins, weight, and fuel economy |
+| [Cars Data Analysis](cars-analysis/README.md) | Vehicle origins, weight, and fuel economy |
 | [COVID-19 Analysis](covid-19-analysis/README.md) | Regional confirmed, death, and recovered cases |
 
 ## Course learning areas
@@ -43,20 +33,23 @@ The featured London Housing analysis includes readable outputs with titles and l
 - [Interactive visualization](interactive-visualization/README.md)
 - [Statistical reasoning](statistical-reasoning/README.md)
 
-## Methods and tools
+## Reproduce the featured analysis
 
-Python, pandas, NumPy, Matplotlib, Seaborn, SciPy, Jupyter Notebook, Bokeh, Plotly, Folium, and related visualization libraries.
+From the repository root:
 
-## Reproducibility
+```text
+python -m venv .venv
+# activate .venv, then:
+pip install -r requirements.txt
+jupyter notebook london-housing-analysis/analysis.ipynb
+```
 
-1. Clone or download this repository.
-2. Create a Python 3 environment.
-3. Run `pip install -r requirements.txt`.
-4. Open a project's Notebook from its own folder and run cells in order.
-5. Use the project README to identify the research question, files, data note, and limitation.
+Run the notebook cells in order. The final plotting section writes the three SVG figures in `london-housing-analysis/figures/`. The standalone `plot_london_housing.py` script performs the same plotting calculations.
 
-The main EDA notebooks use relative paths and do not require the original course folder. Some geospatial notebooks use legacy packages; their README identifies that environment limitation.
+## Data sources and responsible sharing
 
-## Responsible sharing
+The CSV files are course-provided exercise copies. The London Housing file matches the public Kaggle dataset identified as [London Housing Data](https://www.kaggle.com/datasets/rohitgrewal/london-housing-data), but the course copy does not include a machine-readable licence or attribution statement. The original provider and redistribution terms for the Police, Weather, Cars, and COVID files were not included in the supplied materials. I therefore retain the source note, do not claim an open licence, and include no passwords, API keys, or private records. Anyone redistributing the raw CSV files should confirm the original provider's permission and attribution requirements first.
 
-The datasets came from course exercise materials. Before public release, verify each original provider's licence and attribution requirements. No passwords, API keys, or private records are included.
+## Feedback and improvement
+
+Liu Yuechi (MC640935) asked for concrete numerical findings instead of a methods-only description. This revision adds the numerical results above, labelled charts, explicit borough filtering, and code that regenerates the figures. The technical review comments used to make these changes are documented as implementation checks, not attributed to the peer reviewer.
