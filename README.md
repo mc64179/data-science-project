@@ -4,8 +4,7 @@
 **Course:** CISC7204 Data Science and Data Visualization
 **Status:** Completed course collection; selected analyses are ready for portfolio review.
 
-This public project repository documents my semester development from exploratory data analysis to visual communication, interactive graphics, geospatial methods, and statistical reasoning. Assignment 01, Assignment 02, and Midterm materials are kept separate.
-
+This public project repository documents my semester development from exploratory data analysis to visual communication, interactive graphics, geospatial methods, and statistical reasoning.
 ## Featured project
 
 ### London Housing Prices and Crime Patterns
