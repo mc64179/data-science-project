@@ -14,6 +14,18 @@ This public project repository documents my semester development from explorator
 
 The analysis converts dates, derives year and month fields, compares yearly price extremes, summarizes crime counts by area, and identifies lower-priced records. Representative visuals are available in [`london-housing-analysis/figures/`](london-housing-analysis/figures/). The results are descriptive; the exercise data do not establish a causal relationship between crime and housing prices.
 
+## Featured visualizations
+
+The featured London Housing analysis includes readable outputs with titles and labelled axes. The first figure compares yearly average-price extremes; the second compares recorded crime counts across areas.
+
+![Yearly housing price comparison](london-housing-analysis/figures/yearly-price-range.svg)
+
+*Figure 1. Yearly housing price comparison from the supplied London housing dataset.*
+
+![Area crime comparison](london-housing-analysis/figures/crime-by-area.svg)
+
+*Figure 2. Area-level crime comparison from the same dataset.*
+
 ## Project collection
 
 | Project | Research focus |
@@ -49,14 +61,3 @@ The main EDA notebooks use relative paths and do not require the original course
 ## Responsible sharing
 
 The datasets came from course exercise materials. Before public release, verify each original provider's licence and attribution requirements. No passwords, API keys, or private records are included.
-
-## Verification status
-
-- [x] Project folders and names are organized.
-- [x] Main notebooks use portable relative data paths.
-- [x] Main EDA projects include selected visualizations.
-- [x] README files describe research questions, methods, findings, and limitations.
-- [ ] Dataset licences and source attributions verified against the original providers.
-- [ ] Peer feedback recorded and linked to a public improvement commit.
-
-The two unchecked items require evidence outside the local files before final publication.

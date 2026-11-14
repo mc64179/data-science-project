@@ -16,7 +16,9 @@ The results describe patterns in the supplied exercise data but do not establish
 
 - [`analysis.ipynb`](analysis.ipynb)
 - [`data/`](data/) contains the supplied CSV dataset.
-- [`figures/`](figures/) contains selected readable result images.
+- [`figures/yearly-price-range.svg`](figures/yearly-price-range.svg) is a line chart of yearly England price ranges.
+- [`figures/crime-by-area.svg`](figures/crime-by-area.svg) is a labelled bar chart of maximum recorded crime counts by area.
+- [`figures/`](figures/) also contains notebook evidence images.
 
 ## Reproduce the analysis
 
