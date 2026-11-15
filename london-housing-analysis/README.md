@@ -26,7 +26,7 @@ From the repository root, install the pinned dependencies with `pip install -r r
 
 ## Data source and sharing note
 
-The CSV is a course-provided exercise copy matching the public Kaggle dataset [London Housing Data](https://www.kaggle.com/datasets/rohitgrewal/london-housing-data). The supplied file contains no licence or attribution statement, so this repository does not claim an open licence. Confirm the original provider's redistribution and attribution terms before reusing the raw CSV. No passwords, API keys, or private records are included.
+The CSV is a course-provided exercise copy appears to correspond to the public Kaggle dataset [London Housing Data](https://www.kaggle.com/datasets/rohitgrewal/london-housing-data). The supplied file contains no licence or attribution statement, so this repository does not claim an open licence. Confirm the original provider's redistribution and attribution terms before reusing the raw CSV. No passwords, API keys, or private records are included.
 
 ## Limitation
 
