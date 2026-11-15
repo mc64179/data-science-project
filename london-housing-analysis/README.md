@@ -14,7 +14,7 @@ How do housing prices change over time in the England aggregate series, and how 
 ## Files
 
 - [`analysis.ipynb`](analysis.ipynb) contains the exercise steps and the final reproducible plotting section.
-- [`plot_london_housing.py`](plot_london_housing.py) regenerates the three figures from the CSV.
+- [`plot_london_housing.py`](plot_london_housing.py) regenerates the three figures from the CSV and needs only pandas.
 - [`data/5. London Housing Data.csv`](data/5.%20London%20Housing%20Data.csv) is the supplied exercise copy.
 - [`figures/yearly-price-range.svg`](figures/yearly-price-range.svg) shows England monthly price extrema by year.
 - [`figures/crime-by-borough.svg`](figures/crime-by-borough.svg) shows maximum monthly crime counts for London boroughs only.
@@ -22,16 +22,20 @@ How do housing prices change over time in the England aggregate series, and how 
 
 ## Reproduce the analysis
 
-From the repository root, install the pinned dependencies with `pip install -r requirements.txt`, then open this notebook. If running from this folder, use `pip install -r ../requirements.txt`. The notebook and script use the relative `data/` path and do not depend on a local computer folder.
+The pinned dependencies are tested with **Python 3.12**. From the repository root, install them with `pip install -r requirements.txt`, then open this notebook. If you are already inside this folder, use `pip install -r ../requirements.txt`. The notebook and script use the relative `data/` path and do not depend on a local computer folder.
 
 ## Data source and sharing note
 
-The CSV is a course-provided exercise copy appears to correspond to the public Kaggle dataset [London Housing Data](https://www.kaggle.com/datasets/rohitgrewal/london-housing-data). The supplied file contains no licence or attribution statement, so this repository does not claim an open licence. Confirm the original provider's redistribution and attribution terms before reusing the raw CSV. No passwords, API keys, or private records are included.
+The CSV is a course-provided exercise copy that appears to correspond to the public Kaggle dataset [London Housing Data](https://www.kaggle.com/datasets/rohitgrewal/london-housing-data). The supplied file contains no licence or attribution statement, so this repository does not claim an open licence. Confirm the original provider's redistribution and attribution terms before reusing the raw CSV. No passwords, API keys, or private records are included.
 
 ## Limitation
 
-The data are descriptive exercise records. The file includes aggregate rows such as England and Inner London as well as borough rows; the borough charts explicitly exclude aggregate rows. The results do not establish that crime causes housing prices or represent every London transaction.
+The data are descriptive exercise records. The file includes aggregate rows such as England and Inner London as well as borough rows; the borough charts explicitly exclude aggregate rows. The 2020 values cover a single month. The results do not establish that crime causes housing prices or represent every London transaction.
 
-## Feedback and Responsible Sharing
+## Feedback and improvement
 
-Liu Yuechi (MC640935) asked for concrete numerical findings rather than a methods-only description. This revision reports the values above and connects them to reproducible, labelled charts. The broader technical review is recorded as implementation work and is not attributed to Liu.
+A classmate reviewed the first version and pointed out that it described methods rather than reporting findings. This revision reports the values above and connects them to reproducible, labelled charts.
+
+- Peer feedback: "The portfolio described methods but did not report concrete numerical findings."
+- Improvement commit: [`3d2c623`](https://github.com/mc64179/data-science-portfolio/commit/3d2c62332dda11b618f5a2986d7ab361156b5c45)
+- Reproducible figures: [`e14d99d`](https://github.com/mc64179/data-science-project/commit/e14d99d3532abf2efc9172c7eb4ecccc5fed9dd0)
