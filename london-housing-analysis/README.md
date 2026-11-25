@@ -34,8 +34,9 @@ The data are descriptive exercise records. The file includes aggregate rows such
 
 ## Feedback and improvement
 
-A classmate reviewed the first version and pointed out that it described methods rather than reporting findings. This revision reports the values above and connects them to reproducible, labelled charts.
+My classmate Liu Yuechi reviewed the first version and pointed out that it described methods rather than reporting findings. This revision reports the values above and connects them to reproducible, labelled charts.
 
-- Peer feedback: "The portfolio described methods but did not report concrete numerical findings."
+- Peer reviewer: Liu Yuechi, my classmate in CISC7204
+- Feedback: "The portfolio described methods but did not report concrete numerical findings."
 - Improvement commit: [`3d2c623`](https://github.com/mc64179/data-science-portfolio/commit/3d2c62332dda11b618f5a2986d7ab361156b5c45)
 - Reproducible figures: [`e14d99d`](https://github.com/mc64179/data-science-project/commit/e14d99d3532abf2efc9172c7eb4ecccc5fed9dd0)
