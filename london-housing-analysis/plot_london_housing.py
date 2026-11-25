@@ -47,9 +47,12 @@ def price_chart(price):
 def bar_chart(series, filename, title, xlabel, color, note, max_value, width, height):
     L, R, T, B = 230, 80, 65, 55
     row_h = (height - T - B) / len(series)
-    x = lambda value: L + value / max_value * (width - L - R)
+    # Use rounded, visible tick marks and leave room for the largest bar label.
+    tick_step = max(1, int(__import__('math').ceil(max_value / 4)))
+    axis_max = tick_step * 4
+    x = lambda value: L + value / axis_max * (width - L - R)
     svg = start(width, height, title)
-    for tick in range(0, int(max_value)+1, max(1, int(max_value/4))):
+    for tick in range(0, axis_max + 1, tick_step):
         xx = x(tick)
         svg += f'<line x1="{xx:.1f}" y1="{T}" x2="{xx:.1f}" y2="{height-B}" stroke="#ddd"/>' + text(xx, height-B+22, f"{tick:,}", 10)
     for i, (name, value) in enumerate(series.items()):
