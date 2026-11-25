@@ -3,8 +3,7 @@
 **Course:** CISC7204 Data Science and Data Visualization  
 **Status:** Completed semester collection
 
-This public repository documents my semester work in data cleaning, exploratory analysis, visual communication, interactive graphics, geospatial methods, and statistical reasoning. Assignment 01, Assignment 02, and Midterm materials remain separate.
-
+This public repository documents my semester work in data cleaning, exploratory analysis, visual communication, interactive graphics, geospatial methods, and statistical reasoning. 
 ## Featured project: London Housing Prices and Crime Patterns
 
 **Research question:** How do housing prices change over time in the England aggregate series, and how do recorded crime counts and lower-price records vary across London boroughs in the supplied housing dataset?
